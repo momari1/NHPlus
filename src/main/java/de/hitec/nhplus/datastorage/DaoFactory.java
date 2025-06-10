@@ -21,4 +21,13 @@ public class DaoFactory {
     public PatientDao createPatientDAO() {
         return new PatientDao(ConnectionBuilder.getConnection());
     }
+
+    /**
+     * Creates a new CaregiverDao using the shared database connection.
+     *
+     * @return a new CaregiverDao object.
+     */
+    public CaregiverDao createCaregiverDao(){
+        return new CaregiverDao(ConnectionBuilder.getConnection());
+    }
 }

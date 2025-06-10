@@ -5,6 +5,11 @@ import de.hitec.nhplus.utils.DateConverter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Represents a medical treatment assigned to a patient.
+ * <p>
+ * Stores date, time, description, and remarks of the treatment.
+ */
 public class Treatment {
     private long tid;
     private final long pid;
