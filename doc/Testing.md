@@ -11,3 +11,12 @@ https://markdown.de/ einsehen.
 |------------------------------------------------------|------------ ---|---------------------------|
 | TF1: Patient wird ohne Vermögensstand angezeigt      | funktioniert   | –                         |
 | TF2: Neuer Patient wird ohne Vermögensstand angelegt | funktioniert   | –                         |
+
+
+# Tests zu Aufgabe 5
+
+| Testfall                                                             | Ergebnis       | Fehlerbeschreibung        |
+|----------------------------------------------------------------------|------------ ---|---------------------------|
+| TF1: Erfolgreiche Anmeldung mit gültigem Benutzernamen und Passwort  | funktioniert   | –                         |
+| TF2: Fehlerhafte Anmeldung                                           | funktioniert   | –                         |
+| TF3: Passwortanzeige als Sternchen                                   | funktioniert   | –                         |

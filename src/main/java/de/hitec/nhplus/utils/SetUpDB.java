@@ -1,11 +1,9 @@
 package de.hitec.nhplus.utils;
 
-import de.hitec.nhplus.datastorage.ConnectionBuilder;
-import de.hitec.nhplus.datastorage.DaoFactory;
-import de.hitec.nhplus.datastorage.PatientDao;
-import de.hitec.nhplus.datastorage.TreatmentDao;
+import de.hitec.nhplus.datastorage.*;
 import de.hitec.nhplus.model.Patient;
 import de.hitec.nhplus.model.Treatment;
+import de.hitec.nhplus.model.User;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -31,8 +29,10 @@ public class SetUpDB {
         SetUpDB.wipeDb(connection);
         SetUpDB.setUpTablePatient(connection);
         SetUpDB.setUpTableTreatment(connection);
+        SetUpDB.setUpTableUser(connection);
         SetUpDB.setUpPatients();
         SetUpDB.setUpTreatments();
+        SetUpDB.setUpUsers();
     }
 
     /**
@@ -42,6 +42,7 @@ public class SetUpDB {
         try (Statement statement = connection.createStatement()) {
             statement.execute("DROP TABLE patient");
             statement.execute("DROP TABLE treatment");
+            statement.execute("DROP TABLE user");
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
         }
@@ -82,6 +83,19 @@ public class SetUpDB {
         }
     }
 
+    private static void setUpTableUser(Connection connection) {
+        final String SQL = "CREATE TABLE IF NOT EXISTS user (" +
+                "   uid INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "   username TEXT NOT NULL UNIQUE, " +
+                "   password TEXT NOT NULL " +
+                ");";
+        try (Statement statement = connection.createStatement()) {
+            statement.execute(SQL);
+        } catch (SQLException exception) {
+            System.out.println(exception.getMessage());
+        }
+    }
+
 
     private static void setUpPatients() {
         try {
@@ -90,7 +104,7 @@ public class SetUpDB {
             dao.create(new Patient("Martina", "Gerdsen", convertStringToLocalDate("1954-08-12"), "5", "010"));
             dao.create(new Patient("Gertrud", "Franzen", convertStringToLocalDate("1949-04-16"), "3", "002"));
             dao.create(new Patient("Ahmet", "Yilmaz", convertStringToLocalDate("1941-02-22"), "3", "013"));
-            dao.create(new Patient("Hans", "Neumann", convertStringToLocalDate("1955-12-12"), "2", "001" ));
+            dao.create(new Patient("Hans", "Neumann", convertStringToLocalDate("1955-12-12"), "2", "001"));
             dao.create(new Patient("Elisabeth", "Müller", convertStringToLocalDate("1958-03-07"), "5", "110"));
         } catch (SQLException exception) {
             exception.printStackTrace();
@@ -110,6 +124,15 @@ public class SetUpDB {
             dao.create(new Treatment(14, 4, convertStringToLocalDate("2023-08-24"), convertStringToLocalTime("09:30"), convertStringToLocalTime("10:15"), "KG", "Lympfdrainage"));
             dao.create(new Treatment(16, 6, convertStringToLocalDate("2023-08-31"), convertStringToLocalTime("13:30"), convertStringToLocalTime("13:45"), "Toilettengang", "Hilfe beim Toilettengang; Patientin klagt über Schmerzen beim Stuhlgang. Gabe von Iberogast"));
             dao.create(new Treatment(17, 6, convertStringToLocalDate("2023-09-01"), convertStringToLocalTime("16:00"), convertStringToLocalTime("17:00"), "KG", "Massage der Extremitäten zur Verbesserung der Durchblutung"));
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    private static void setUpUsers() {
+        try {
+            UserDao dao = DaoFactory.getDaoFactory().createUserDAO();
+            dao.createUser(new User("admin", "1234"));
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
