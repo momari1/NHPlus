@@ -2,6 +2,7 @@ package de.hitec.nhplus.model;
 
 import de.hitec.nhplus.utils.DateConverter;
 import javafx.beans.property.SimpleStringProperty;
+
 import java.time.LocalDate;
 
 /**
@@ -36,8 +37,7 @@ public class Caregiver extends Person {
     }
 
     /**
-     * Constructor to initiate an object of class <code>Caregiver</code> with the given parameter. Use this constructor
-     * to initiate objects, which are already persisted and have a patient id (cid).
+     * Constructs a new Caregiver with an existing ID (used for loading from the database).
      *
      * @param cid           Caregiver ID.
      * @param firstname     First name.
@@ -46,7 +46,7 @@ public class Caregiver extends Person {
      * @param active        Active status.
      * @param inactiveSince Date since the caregiver became inactive.
      */
-    public Caregiver(Long cid, String firstname, String surname, String phoneNumber, boolean active, LocalDate inactiveSince) {
+    public Caregiver(Long cid, String surname, String firstname,  String phoneNumber, boolean active, LocalDate inactiveSince) {
         super(surname, firstname);
         this.cid = cid;
         this.phoneNumber = phoneNumber;
@@ -100,31 +100,46 @@ public class Caregiver extends Person {
     /**
      * Returns the date since the caregiver has been inactive.
      *
-     * @return the date the caregiver became inactive, or null if still active.
+     * @return the date the caregiver became inactive, or null/empty if still active.
      */
     public String getInactiveSince() {
         return inactiveSince.get();
     }
 
     /**
-     * Stores the given string as new <code>birthOfDate</code>.
+     * Sets the date since the caregiver has been inactive.
      *
-     * @param inactiveSince as string in the following format: YYYY-MM-DD.
+     * @param inactiveSince Date in format YYYY-MM-DD.
      */
     public void setInactiveSince(String inactiveSince) {
         this.inactiveSince.set(inactiveSince);
     }
 
     /**
-     * @return string-representation of the Caregiver
+     * Returns the activity status of the caregiver as a string.
+     *
+     * @return "Active" if the caregiver is active, otherwise "Inactive".
+     */
+    public String getActiveStatus() {
+        if (active) {
+            return "Aktiv";
+        } else {
+            return "Inaktiv";
+        }
+    }
+
+    /**
+     * Returns a string representation of the caregiver object.
+     *
+     * @return formatted caregiver data.
      */
     public String toString() {
         return "Caregiver" + "\nCID: " + this.cid +
                 "\nFirstname: " + this.getFirstName() +
                 "\nSurname: " + this.getSurname() +
                 "\nTelephone: " + this.phoneNumber +
-                "\n active: " + this.active +
-                "\n inactiveSince: " + this.inactiveSince +
+                "\n Active: " + this.active +
+                "\n Inactive Since: " + this.inactiveSince +
                 "\n";
     }
 }

@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -38,13 +39,13 @@ public class CaregiverDao extends DaoImp<Caregiver> {
         PreparedStatement preparedStatement = null;
 
         try {
-            final String SQL = "INSERT INTO caregiver (firstname, surname, phoneNumber, active, inactiveSince ) " +
+            final String SQL = "INSERT INTO caregiver ( surname, firstname, phoneNumber, active, inactiveSince ) " +
                     "VALUES (?, ?, ?, ?, ?)";
 
             preparedStatement = this.connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, caregiver.getFirstName());
-            preparedStatement.setString(2, caregiver.getSurname());
+            preparedStatement.setString(1, caregiver.getSurname());
+            preparedStatement.setString(2, caregiver.getFirstName());
             preparedStatement.setString(3, caregiver.getPhoneNumber());
             preparedStatement.setBoolean(4, caregiver.isActive());
             preparedStatement.setString(5, caregiver.getInactiveSince());
@@ -145,19 +146,18 @@ public class CaregiverDao extends DaoImp<Caregiver> {
         try {
             final String SQL =
                     "UPDATE caregiver SET " +
-                            "firstname = ?, " +
                             "surname = ?, " +
+                            "firstname = ?, " +
                             "phoneNumber = ?, " +
                             "active = ?, " +
                             "inactiveSince = ? " +
                             "WHERE cid = ?";
             preparedStatement = this.connection.prepareStatement(SQL);
-            preparedStatement.setString(1, caregiver.getFirstName());
-            preparedStatement.setString(2, caregiver.getSurname());
+            preparedStatement.setString(1, caregiver.getSurname());
+            preparedStatement.setString(2, caregiver.getFirstName());
             preparedStatement.setString(3, caregiver.getPhoneNumber());
             preparedStatement.setBoolean(4, caregiver.isActive());
             preparedStatement.setString(5, caregiver.getInactiveSince());
-            //preparedStatement.setDate(5, caregiver.getInactiveSince());
             preparedStatement.setLong(6, caregiver.getCid());
 
         } catch (SQLException exception) {
@@ -169,7 +169,7 @@ public class CaregiverDao extends DaoImp<Caregiver> {
     /**
      * Generates a <code>PreparedStatement</code> to delete a caregiver with the given id.
      *
-     * @param cid Id of the caregiver to delete.
+     * @param cid ID of the caregiver to delete.
      * @return <code>PreparedStatement</code> to delete caregiver with the given id.
      */
     @Override

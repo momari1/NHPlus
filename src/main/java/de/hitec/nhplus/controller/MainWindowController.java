@@ -13,6 +13,11 @@ public class MainWindowController {
     @FXML
     private BorderPane mainBorderPane;
 
+    /**
+     * Loads the "AllPatientView.fxml" and displays it in the center of the main layout.
+     *
+     * @param event The action event triggered by the user.
+     */
     @FXML
     private void handleShowAllPatient(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/AllPatientView.fxml"));
@@ -23,6 +28,11 @@ public class MainWindowController {
         }
     }
 
+    /**
+     * Loads the "AllTreatmentsView.fxml" and displays it in the center of the main layout.
+     *
+     * @param event The action event triggered by the user.
+     */
     @FXML
     private void handleShowAllTreatments(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/AllTreatmentView.fxml"));
@@ -33,6 +43,11 @@ public class MainWindowController {
         }
     }
 
+    /**
+     * Loads the "AllCaregiverView.fxml" and displays it in the center of the main layout.
+     *
+     * @param event The action event triggered by the user.
+     */
     @FXML
     private void handleShowAllCaregiver(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/AllCaregiverView.fxml"));

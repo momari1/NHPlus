@@ -4,6 +4,7 @@ import de.hitec.nhplus.datastorage.DaoFactory;
 import de.hitec.nhplus.datastorage.CaregiverDao;
 import de.hitec.nhplus.model.Caregiver;
 import de.hitec.nhplus.utils.DateConverter;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -15,6 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -39,7 +41,7 @@ public class AllCaregiverController {
     private TableColumn<Caregiver, String> columnPhoneNumber;
 
     @FXML
-    private TableColumn<Caregiver, Boolean> columnActive;
+    private TableColumn<Caregiver, String> columnActive;
 
     @FXML
     private TableColumn<Caregiver, String> columnInactive;
@@ -89,9 +91,8 @@ public class AllCaregiverController {
         this.columnPhoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
         this.columnPhoneNumber.setCellFactory(TextFieldTableCell.forTableColumn());
 
-
-        this.columnActive.setCellValueFactory(new PropertyValueFactory<>("active"));
-        //this.columnActive.setCellFactory(TextFieldTableCell.forTableColumn());
+        columnActive.setCellValueFactory(new PropertyValueFactory<>("activeStatus"));
+        this.columnActive.setCellFactory(TextFieldTableCell.forTableColumn());
 
         this.columnInactive.setCellValueFactory(new PropertyValueFactory<>("inactiveSince"));
         this.columnInactive.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -240,6 +241,15 @@ public class AllCaregiverController {
         this.textFieldInactive.clear();
     }
 
+    /**
+     * Validates that all required input fields have been filled out.
+     * <p>
+     * This method checks whether the text fields for first name, surname,
+     * phone number, active status, and inactive status are not empty
+     * and do not consist only of whitespace.
+     *
+     * @return {@code true} if all fields contain valid (non-blank) input, otherwise {@code false}.
+     */
     private boolean areInputDataValid() {
         return !this.textFieldFirstName.getText().isBlank() && !this.textFieldSurname.getText().isBlank() &&
                !this.textFieldPhoneNumber.getText().isBlank() && !this.textFieldActive.getText().isBlank() && !this.textFieldInactive.getText().isBlank();

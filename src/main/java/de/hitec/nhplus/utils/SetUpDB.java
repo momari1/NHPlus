@@ -6,7 +6,6 @@ import de.hitec.nhplus.model.Patient;
 import de.hitec.nhplus.model.Treatment;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -103,6 +102,9 @@ public class SetUpDB {
         }
     }
 
+    /**
+     * Adds Patients to the database:
+     */
     private static void setUpPatients() {
         try {
             PatientDao dao = DaoFactory.getDaoFactory().createPatientDAO();
@@ -141,9 +143,12 @@ public class SetUpDB {
     private static void setUpCaregiver() {
         CaregiverDao dao = DaoFactory.getDaoFactory().createCaregiverDao();
         try {
-            dao.create(new Caregiver("Yana", "Anna", "01528573434", true, null)); // null
-            dao.create(new Caregiver("Max", "Lukas", "0172334775", true, null));
+            dao.create(new Caregiver("Yana", "Anna", "01528573434", true, null));
+            dao.create(new Caregiver("Max", "Lukas", "01723347752", true, null));
             dao.create(new Caregiver("Meier", "Sophie", "01609934673", false, convertStringToLocalDate("2023-09-01")));
+            dao.create(new Caregiver("Mohammad", "Lard", "01528534558", false, convertStringToLocalDate("2025-03-01")));
+            dao.create(new Caregiver("Meals", "Balle", "01703452340", true, null));
+            dao.create(new Caregiver("Lina", "Samer", "01524367438", false, convertStringToLocalDate("2024-07-22")));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
