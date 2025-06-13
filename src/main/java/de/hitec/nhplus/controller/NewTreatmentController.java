@@ -30,6 +30,9 @@ public class NewTreatmentController {
     private TextField textFieldEnd;
 
     @FXML
+    private TextField textFieldCaregiverPhoneNumber;
+
+    @FXML
     private TextField textFieldDescription;
 
     @FXML
@@ -55,6 +58,7 @@ public class NewTreatmentController {
                 NewTreatmentController.this.buttonAdd.setDisable(NewTreatmentController.this.areInputDataInvalid());
         this.textFieldBegin.textProperty().addListener(inputNewPatientListener);
         this.textFieldEnd.textProperty().addListener(inputNewPatientListener);
+        this.textFieldCaregiverPhoneNumber.textProperty().addListener(inputNewPatientListener);
         this.textFieldDescription.textProperty().addListener(inputNewPatientListener);
         this.textAreaRemarks.textProperty().addListener(inputNewPatientListener);
         this.datePicker.valueProperty().addListener((observableValue, localDate, t1) -> NewTreatmentController.this.buttonAdd.setDisable(NewTreatmentController.this.areInputDataInvalid()));
@@ -82,9 +86,10 @@ public class NewTreatmentController {
         LocalDate date = this.datePicker.getValue();
         LocalTime begin = DateConverter.convertStringToLocalTime(textFieldBegin.getText());
         LocalTime end = DateConverter.convertStringToLocalTime(textFieldEnd.getText());
+        String caregiverPhoneNumber = this.textFieldCaregiverPhoneNumber.getText();
         String description = textFieldDescription.getText();
         String remarks = textAreaRemarks.getText();
-        Treatment treatment = new Treatment(patient.getPid(), date, begin, end, description, remarks);
+        Treatment treatment = new Treatment(patient.getPid(), date, begin, end, caregiverPhoneNumber, description, remarks);
         createTreatment(treatment);
         controller.readAllAndShowInTableView();
         stage.close();

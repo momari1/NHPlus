@@ -4,7 +4,6 @@ import de.hitec.nhplus.Main;
 import de.hitec.nhplus.datastorage.DaoFactory;
 import de.hitec.nhplus.datastorage.PatientDao;
 import de.hitec.nhplus.datastorage.TreatmentDao;
-import de.hitec.nhplus.model.Caregiver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -42,6 +41,9 @@ public class AllTreatmentController {
     private TableColumn<Treatment, String> columnEnd;
 
     @FXML
+    private TableColumn<Treatment, String> columnCaregiverPhoneNumber;
+
+    @FXML
     private TableColumn<Treatment, String> columnDescription;
 
     @FXML
@@ -66,6 +68,7 @@ public class AllTreatmentController {
         this.columnDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         this.columnBegin.setCellValueFactory(new PropertyValueFactory<>("begin"));
         this.columnEnd.setCellValueFactory(new PropertyValueFactory<>("end"));
+        this.columnCaregiverPhoneNumber.setCellValueFactory(new PropertyValueFactory<>("caregiverPhoneNumber"));
         this.columnDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         this.tableView.setItems(this.treatments);
 
@@ -105,7 +108,6 @@ public class AllTreatmentController {
             exception.printStackTrace();
         }
     }
-
 
     private String formatPatientDisplayName(Patient patient) {
         return String.format("%s, %s", patient.getSurname(), patient.getFirstName());
