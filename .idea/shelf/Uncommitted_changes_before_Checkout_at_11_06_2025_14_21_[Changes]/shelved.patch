@@ -1,0 +1,302 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a34ff0ce-7744-41f9-a83e-ef9c348ef1da\" name=\"Changes\" comment=\"Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/controller/UserController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/UserDao.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/model/User.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/de/hitec/nhplus/LoginView.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/5a5b8be1-080b-4129-b89d-42f1ea832b90.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/5a5b8be1-080b-4129-b89d-42f1ea832b90.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/db/nursingHome.db\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/doc/Testing.md\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/doc/Testing.md\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/ConnectionBuilder.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/ConnectionBuilder.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/DaoFactory.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/DaoFactory.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/utils/SetUpDB.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hitec/nhplus/utils/SetUpDB.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2cwPBBhwpAapfZ2CfHZwdL3mAXg\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.SetUpDB.executor&quot;: &quot;Run&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;feature/login&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/Users/yanahudylko/Documents/Schule/NHPlus&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.44712645&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;DatabaseDriversLRU&quot;: [\r\n      &quot;sqlite&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\sschw\\laufender Unterricht\\NHPlus\\nhplus\\doc\" />\r\n      <recent name=\"C:\\Users\\T.Thiel\\Documents\\23\\FA23E\\LF05\\NHPlus\\NHPlus\\src\\main\\resources\\de\\hitec\\nhplus\" />\r\n      <recent name=\"C:\\Users\\T.Thiel\\Documents\\23\\FA23E\\LF05\\NHPlus\\NHPlus\\src\\main\\java\\de\\hitec\\nhplus\\controller\" />\r\n      <recent name=\"C:\\Users\\T.Thiel\\Documents\\23\\FA23E\\LF05\\NHPlus\\NHPlus\\src\\main\\java\\de\\hitec\\nhplus\\utils\" />\r\n      <recent name=\"C:\\Users\\T.Thiel\\Documents\\23\\FA23E\\LF05\\NHPlus\\NHPlus\\src\\main\\java\\de\\hitec\\nhplus\\model\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"de.hitec.nhplus.utils\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"de.hitec.nhplus.Main\" />\r\n      <module name=\"NHPlus\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"de.hitec.nhplus.controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"SetUpDB\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"de.hitec.nhplus.utils.SetUpDB\" />\r\n      <module name=\"NHPlus\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"de.hitec.nhplus.utils.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"Application.SetUpDB\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.SetUpDB\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a34ff0ce-7744-41f9-a83e-ef9c348ef1da\" name=\"Changes\" comment=\"\" />\r\n      <created>1709019534076</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1709019534076</updated>\r\n      <workItem from=\"1709019535103\" duration=\"41658000\" />\r\n      <workItem from=\"1709631568050\" duration=\"764000\" />\r\n      <workItem from=\"1740484994368\" duration=\"239000\" />\r\n      <workItem from=\"1740485593473\" duration=\"2881000\" />\r\n      <workItem from=\"1743519415913\" duration=\"5538000\" />\r\n      <workItem from=\"1743525139214\" duration=\"1223000\" />\r\n      <workItem from=\"1743526797009\" duration=\"83000\" />\r\n      <workItem from=\"1743526923857\" duration=\"2891000\" />\r\n      <workItem from=\"1743531464575\" duration=\"33000\" />\r\n      <workItem from=\"1743667721637\" duration=\"1396000\" />\r\n      <workItem from=\"1743754293247\" duration=\"1691000\" />\r\n      <workItem from=\"1745315730307\" duration=\"3071000\" />\r\n      <workItem from=\"1745922248066\" duration=\"4221000\" />\r\n      <workItem from=\"1746532444033\" duration=\"3346000\" />\r\n      <workItem from=\"1746781665997\" duration=\"615000\" />\r\n      <workItem from=\"1747119634332\" duration=\"2465000\" />\r\n      <workItem from=\"1747130485645\" duration=\"2509000\" />\r\n      <workItem from=\"1747963260654\" duration=\"41000\" />\r\n      <workItem from=\"1747963391770\" duration=\"57000\" />\r\n      <workItem from=\"1747963462936\" duration=\"1233000\" />\r\n      <workItem from=\"1747965411503\" duration=\"624000\" />\r\n      <workItem from=\"1748334451835\" duration=\"3623000\" />\r\n      <workItem from=\"1748346193790\" duration=\"3996000\" />\r\n      <workItem from=\"1748350210566\" duration=\"941000\" />\r\n      <workItem from=\"1748351155668\" duration=\"534000\" />\r\n      <workItem from=\"1748361546773\" duration=\"623000\" />\r\n      <workItem from=\"1748362179842\" duration=\"929000\" />\r\n      <workItem from=\"1748363134110\" duration=\"134000\" />\r\n      <workItem from=\"1748363270042\" duration=\"1462000\" />\r\n      <workItem from=\"1748852227081\" duration=\"18956000\" />\r\n      <workItem from=\"1749029821649\" duration=\"2846000\" />\r\n      <workItem from=\"1749145474599\" duration=\"1000\" />\r\n      <workItem from=\"1749214602564\" duration=\"477000\" />\r\n      <workItem from=\"1749378128345\" duration=\"626000\" />\r\n      <workItem from=\"1749378767797\" duration=\"438000\" />\r\n      <workItem from=\"1749379229089\" duration=\"167000\" />\r\n      <workItem from=\"1749379408908\" duration=\"584000\" />\r\n      <workItem from=\"1749379999612\" duration=\"1063000\" />\r\n      <workItem from=\"1749381072475\" duration=\"116000\" />\r\n      <workItem from=\"1749381194102\" duration=\"77000\" />\r\n      <workItem from=\"1749381289790\" duration=\"21000\" />\r\n      <workItem from=\"1749381312906\" duration=\"17000\" />\r\n      <workItem from=\"1749381331674\" duration=\"924000\" />\r\n      <workItem from=\"1749383023699\" duration=\"182000\" />\r\n      <workItem from=\"1749383210975\" duration=\"3375000\" />\r\n      <workItem from=\"1749537155445\" duration=\"276000\" />\r\n      <workItem from=\"1749624337679\" duration=\"1170000\" />\r\n      <workItem from=\"1749630396322\" duration=\"5878000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743526210484</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743526210484</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743527004876</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743527004876</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/NHPlus\" />\r\n    </ignored-roots>\r\n    <MESSAGE value=\"Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5037343a7d0c8a9fb09965932476f62607f21a62)
++++ b/.idea/workspace.xml	(date 1749644441785)
+@@ -4,21 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a34ff0ce-7744-41f9-a83e-ef9c348ef1da" name="Changes" comment="Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/controller/UserController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/UserDao.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/model/User.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/de/hitec/nhplus/LoginView.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a5b8be1-080b-4129-b89d-42f1ea832b90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a5b8be1-080b-4129-b89d-42f1ea832b90.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/db/nursingHome.db" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/doc/Testing.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Testing.md" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/ConnectionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/ConnectionBuilder.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/datastorage/DaoFactory.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/utils/SetUpDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hitec/nhplus/utils/SetUpDB.java" afterDir="false" />
+-    </list>
++    <list default="true" id="a34ff0ce-7744-41f9-a83e-ef9c348ef1da" name="Changes" comment="Die Aufgabe1: Die Klassen Fertig angepasst, Testing erweitert, AllCaregiverView.fxml Fertig angepasst." />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -32,13 +18,40 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <excluded-from-favorite>
++      <branch-storage>
++        <map>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$/NHPlus" source="origin/main" />
++                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </excluded-from-favorite>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+         <entry key="$PROJECT_DIR$" value="main" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="ROOT_SYNC" value="DONT_SYNC" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;momari1&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/momari1/NHPlus.git&quot;,
++    &quot;accountId&quot;: &quot;fdd80594-e149-4eb7-897f-bdea80fbb2d5&quot;
++  }
++}</component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -53,53 +66,54 @@
+   &quot;associatedIndex&quot;: 4
+ }</component>
+   <component name="ProjectId" id="2cwPBBhwpAapfZ2CfHZwdL3mAXg" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.SetUpDB.executor&quot;: &quot;Run&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;feature/login&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/yanahudylko/Documents/Schule/NHPlus&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.44712645&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.HelloApplication.executor": "Run",
++    "Application.Main.executor": "Run",
++    "Application.SetUpDB.executor": "Run",
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "main",
++    "ignore.virus.scanning.warn.message": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/momari/LF5/NHPlus/doc",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.44712645",
++    "settings.editor.selected.configurable": "preferences.keymap",
++    "vue.rearranger.settings.migration": "true"
+   },
+-  &quot;keyToStringList&quot;: {
+-    &quot;DatabaseDriversLRU&quot;: [
+-      &quot;sqlite&quot;
++  "keyToStringList": {
++    "DatabaseDriversLRU": [
++      "sqlite"
+     ]
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\sschw\laufender Unterricht\NHPlus\nhplus\doc" />
+-      <recent name="C:\Users\T.Thiel\Documents\23\FA23E\LF05\NHPlus\NHPlus\src\main\resources\de\hitec\nhplus" />
+-      <recent name="C:\Users\T.Thiel\Documents\23\FA23E\LF05\NHPlus\NHPlus\src\main\java\de\hitec\nhplus\controller" />
+-      <recent name="C:\Users\T.Thiel\Documents\23\FA23E\LF05\NHPlus\NHPlus\src\main\java\de\hitec\nhplus\utils" />
+-      <recent name="C:\Users\T.Thiel\Documents\23\FA23E\LF05\NHPlus\NHPlus\src\main\java\de\hitec\nhplus\model" />
++      <recent name="C:\Users\momari\LF5\NHPlus\doc" />
++      <recent name="C:\Users\momari\LF5\NHPlus\src\main\resources\de\hitec\nhplus" />
++      <recent name="C:\Users\momari\LF5\NHPlus\src\main\java\de\hitec\nhplus" />
++      <recent name="C:\Users\momari\LF5\NHPlus\src\main\java\de\hitec\nhplus\datastorage" />
++      <recent name="C:\Users\momari\LF5\NHPlus\src\main\java\de\hitec\nhplus\controller" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+       <recent name="de.hitec.nhplus.utils" />
+@@ -132,10 +146,6 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <list>
+-      <item itemvalue="Application.Main" />
+-      <item itemvalue="Application.SetUpDB" />
+-    </list>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Main" />
+@@ -146,8 +156,8 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
++        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
++        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -180,33 +190,29 @@
+       <workItem from="1747963391770" duration="57000" />
+       <workItem from="1747963462936" duration="1233000" />
+       <workItem from="1747965411503" duration="624000" />
+-      <workItem from="1748334451835" duration="3623000" />
+-      <workItem from="1748346193790" duration="3996000" />
+-      <workItem from="1748350210566" duration="941000" />
+-      <workItem from="1748351155668" duration="534000" />
+-      <workItem from="1748361546773" duration="623000" />
+-      <workItem from="1748362179842" duration="929000" />
+-      <workItem from="1748363134110" duration="134000" />
+-      <workItem from="1748363270042" duration="1462000" />
+-      <workItem from="1748852227081" duration="18956000" />
+-      <workItem from="1749029821649" duration="2846000" />
+-      <workItem from="1749145474599" duration="1000" />
+-      <workItem from="1749214602564" duration="477000" />
+-      <workItem from="1749378128345" duration="626000" />
+-      <workItem from="1749378767797" duration="438000" />
+-      <workItem from="1749379229089" duration="167000" />
+-      <workItem from="1749379408908" duration="584000" />
+-      <workItem from="1749379999612" duration="1063000" />
+-      <workItem from="1749381072475" duration="116000" />
+-      <workItem from="1749381194102" duration="77000" />
+-      <workItem from="1749381289790" duration="21000" />
+-      <workItem from="1749381312906" duration="17000" />
+-      <workItem from="1749381331674" duration="924000" />
+-      <workItem from="1749383023699" duration="182000" />
+-      <workItem from="1749383210975" duration="3375000" />
+-      <workItem from="1749537155445" duration="276000" />
+-      <workItem from="1749624337679" duration="1170000" />
+-      <workItem from="1749630396322" duration="5878000" />
++      <workItem from="1748334451835" duration="10476000" />
++      <workItem from="1748356325485" duration="3011000" />
++      <workItem from="1748416569173" duration="1251000" />
++      <workItem from="1748585278014" duration="1083000" />
++      <workItem from="1748851999434" duration="776000" />
++      <workItem from="1748852963627" duration="3971000" />
++      <workItem from="1748858456912" duration="399000" />
++      <workItem from="1748859034235" duration="5520000" />
++      <workItem from="1748864841867" duration="1212000" />
++      <workItem from="1748944134566" duration="11905000" />
++      <workItem from="1748996859656" duration="9513000" />
++      <workItem from="1749028134218" duration="20922000" />
++      <workItem from="1749105304293" duration="7263000" />
++      <workItem from="1749204196130" duration="9770000" />
++      <workItem from="1749226762951" duration="3793000" />
++      <workItem from="1749231365438" duration="1094000" />
++      <workItem from="1749236358895" duration="6650000" />
++      <workItem from="1749284354205" duration="5373000" />
++      <workItem from="1749308136088" duration="12083000" />
++      <workItem from="1749538012170" duration="15275000" />
++      <workItem from="1749561743295" duration="1707000" />
++      <workItem from="1749590777106" duration="4000" />
++      <workItem from="1749625004980" duration="5980000" />
+     </task>
+     <task id="LOCAL-00001" summary="Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert">
+       <option name="closed" value="true" />
+@@ -224,13 +230,36 @@
+       <option name="project" value="LOCAL" />
+       <updated>1743527004876</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Die Aufgabe1: Die Klassen Fertig angepasst, Testing erweitert, AllCaregiverView.fxml Fertig angepasst.">
++      <option name="closed" value="true" />
++      <created>1749643149996</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1749643149996</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/main" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+@@ -242,10 +271,12 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <ignored-roots>
+-      <path value="$PROJECT_DIR$/NHPlus" />
+-    </ignored-roots>
+     <MESSAGE value="Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Readme aktualisiert, Klassendiagramm hinzugefügt, JavaFX IB, Schriftarten aktualisiert" />
++    <MESSAGE value="Die Aufgabe1: Die Klassen Fertig angepasst, Testing erweitert, AllCaregiverView.fxml Fertig angepasst." />
++    <option name="LAST_COMMIT_MESSAGE" value="Die Aufgabe1: Die Klassen Fertig angepasst, Testing erweitert, AllCaregiverView.fxml Fertig angepasst." />
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
+   </component>
+ </project>
+\ No newline at end of file

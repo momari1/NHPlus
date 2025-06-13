@@ -4,6 +4,7 @@ import de.hitec.nhplus.Main;
 import de.hitec.nhplus.datastorage.DaoFactory;
 import de.hitec.nhplus.datastorage.PatientDao;
 import de.hitec.nhplus.datastorage.TreatmentDao;
+import de.hitec.nhplus.model.Caregiver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -95,7 +96,7 @@ public class AllTreatmentController {
         PatientDao dao = DaoFactory.getDaoFactory().createPatientDAO();
         try {
             patientList = (ArrayList<Patient>) dao.readAll();
-            for (Patient patient: patientList) {
+            for (Patient patient : patientList) {
                 this.patientSelection.add(formatPatientDisplayName(patient));
             }
             comboBoxPatientSelection.setItems(patientSelection);
@@ -104,6 +105,7 @@ public class AllTreatmentController {
             exception.printStackTrace();
         }
     }
+
 
     private String formatPatientDisplayName(Patient patient) {
         return String.format("%s, %s", patient.getSurname(), patient.getFirstName());
@@ -121,8 +123,7 @@ public class AllTreatmentController {
             } catch (SQLException exception) {
                 exception.printStackTrace();
             }
-        }
-        else {
+        } else {
             Patient patient = getPatientFromDisplayName(selectedPatient);
             if (patient != null) {
                 try {
@@ -166,11 +167,12 @@ public class AllTreatmentController {
 
     @FXML
     public void handleNewTreatment() {
-        try{
+        try {
             String selectedPatient = this.comboBoxPatientSelection.getSelectionModel().getSelectedItem();
-            Patient patient = searchInList(selectedPatient);
+            // Patient patient = searchInList(selectedPatient);
+            Patient patient = getPatientFromDisplayName(selectedPatient);
             newTreatmentWindow(patient);
-        } catch (NullPointerException exception){
+        } catch (NullPointerException exception) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Information");
             alert.setHeaderText("Patient für die Behandlung fehlt!");
@@ -210,7 +212,7 @@ public class AllTreatmentController {
         }
     }
 
-    public void treatmentWindow(Treatment treatment){
+    public void treatmentWindow(Treatment treatment) {
         try {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/TreatmentView.fxml"));
             AnchorPane pane = loader.load();
