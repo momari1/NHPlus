@@ -2,6 +2,7 @@ package de.hitec.nhplus.controller;
 
 import de.hitec.nhplus.datastorage.DaoFactory;
 import de.hitec.nhplus.datastorage.TreatmentDao;
+import de.hitec.nhplus.model.Caregiver;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -18,10 +19,13 @@ import java.time.LocalTime;
 public class NewTreatmentController {
 
     @FXML
-    private Label labelFirstName;
+    private Label labelPatientFirstName;
 
     @FXML
-    private Label labelSurname;
+    private Label labelPatientSurname;
+
+    @FXML
+    private Label labelCaregiverName;
 
     @FXML
     private TextField textFieldBegin;
@@ -41,16 +45,24 @@ public class NewTreatmentController {
     @FXML
     private Button buttonAdd;
 
+    @FXML
+    private Button buttonCancel;
+
+
     private AllTreatmentController controller;
     private Patient patient;
+    private Caregiver caregiver;
+
     private Stage stage;
 
-    public void initialize(AllTreatmentController controller, Stage stage, Patient patient) {
-        this.controller= controller;
+    public void initialize(AllTreatmentController controller, Stage stage, Patient patient, Caregiver caregiver) {
+        this.controller = controller;
         this.patient = patient;
+        this.caregiver = caregiver;
         this.stage = stage;
 
         this.buttonAdd.setDisable(true);
+        this.buttonCancel.setDisable(false);
         ChangeListener<String> inputNewPatientListener = (observableValue, oldText, newText) ->
                 NewTreatmentController.this.buttonAdd.setDisable(NewTreatmentController.this.areInputDataInvalid());
         this.textFieldBegin.textProperty().addListener(inputNewPatientListener);
@@ -70,21 +82,26 @@ public class NewTreatmentController {
             }
         });
         this.showPatientData();
+        this.showCaregiverData();
     }
 
-    private void showPatientData(){
-        this.labelFirstName.setText(patient.getFirstName());
-        this.labelSurname.setText(patient.getSurname());
+    private void showPatientData() {
+        this.labelPatientFirstName.setText(patient.getFirstName());
+        this.labelPatientSurname.setText(patient.getSurname());
+    }
+
+    private void showCaregiverData() {
+        this.labelCaregiverName.setText(caregiver.getSurname() + ", " + caregiver.getFirstName());
     }
 
     @FXML
-    public void handleAdd(){
+    public void handleAdd() {
         LocalDate date = this.datePicker.getValue();
         LocalTime begin = DateConverter.convertStringToLocalTime(textFieldBegin.getText());
         LocalTime end = DateConverter.convertStringToLocalTime(textFieldEnd.getText());
         String description = textFieldDescription.getText();
         String remarks = textAreaRemarks.getText();
-        Treatment treatment = new Treatment(patient.getPid(), date, begin, end, description, remarks);
+        Treatment treatment = new Treatment(patient.getPid(), date, begin, end, description, remarks, caregiver.getCid());
         createTreatment(treatment);
         controller.readAllAndShowInTableView();
         stage.close();
@@ -100,7 +117,7 @@ public class NewTreatmentController {
     }
 
     @FXML
-    public void handleCancel(){
+    public void handleCancel() {
         stage.close();
     }
 
