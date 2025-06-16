@@ -5,6 +5,7 @@ import de.hitec.nhplus.datastorage.ConnectionBuilder;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -23,11 +24,11 @@ public class Main extends Application {
 
     public void mainWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/MainWindowView.fxml"));
-            BorderPane pane = loader.load();
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("/de/hitec/nhplus/LoginView.fxml"));
+            Parent root = loader.load();
 
-            Scene scene = new Scene(pane);
-            this.primaryStage.setTitle("NHPlus");
+            Scene scene = new Scene(root);
+            this.primaryStage.setTitle("NHPlus - Login");
             this.primaryStage.setScene(scene);
             this.primaryStage.setResizable(false);
             this.primaryStage.show();

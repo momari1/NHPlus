@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="270.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.hitec.nhplus.controller.UserController">
+    <GridPane alignment="CENTER" hgap="10.0" vgap="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+              AnchorPane.topAnchor="80.0">
+        <Label text="Benutzername:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="textFieldUserName" promptText="Benutzername" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Passwort:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <PasswordField fx:id="textFieldPassword" promptText="Passwort" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Button fx:id="buttonLogin" onAction="#handleLogin" text="Anmelden" GridPane.columnIndex="1"
+                GridPane.rowIndex="2"/>
+        <columnConstraints>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+    </GridPane>
+
+    <Label layoutX="172.0" layoutY="21.0" text="Login" textAlignment="CENTER">
+        <font>
+            <Font size="24.0"/>
+        </font>
+    </Label>
+</AnchorPane>

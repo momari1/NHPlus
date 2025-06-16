@@ -499,7 +499,7 @@
     </routine>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-05-27.16:44:13</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-06-16.10:04:28</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1590,118 +1590,186 @@
     <argument id="554" parent="190">
       <Position>1</Position>
     </argument>
-    <table id="555" parent="191" name="patient"/>
-    <table id="556" parent="191" name="sqlite_master">
+    <table id="555" parent="191" name="caregiver"/>
+    <table id="556" parent="191" name="patient"/>
+    <table id="557" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="557" parent="191" name="sqlite_sequence">
+    <table id="558" parent="191" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="558" parent="191" name="treatment"/>
-    <column id="559" parent="555" name="pid">
+    <table id="559" parent="191" name="treatment"/>
+    <table id="560" parent="191" name="user"/>
+    <column id="561" parent="555" name="cid">
       <AutoIncrement>1</AutoIncrement>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="560" parent="555" name="firstname">
+    <column id="562" parent="555" name="surname">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="561" parent="555" name="surname">
+    <column id="563" parent="555" name="firstname">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="562" parent="555" name="dateOfBirth">
+    <column id="564" parent="555" name="phoneNumber">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="563" parent="555" name="carelevel">
+    <column id="565" parent="555" name="active">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StoredType>TEXT|0s</StoredType>
+      <StoredType>BOOLEAN|0s</StoredType>
     </column>
-    <column id="564" parent="555" name="roomnumber">
-      <NotNull>1</NotNull>
+    <column id="566" parent="555" name="inactiveSince">
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <key id="565" parent="555">
-      <ColNames>pid</ColNames>
+    <key id="567" parent="555">
+      <ColNames>cid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="566" parent="556" name="type">
-      <Position>1</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="567" parent="556" name="name">
-      <Position>2</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="568" parent="556" name="tbl_name">
-      <Position>3</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="569" parent="556" name="rootpage">
-      <Position>4</Position>
-      <StoredType>INT|0s</StoredType>
-    </column>
-    <column id="570" parent="556" name="sql">
-      <Position>5</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="571" parent="557" name="name">
-      <Position>1</Position>
-    </column>
-    <column id="572" parent="557" name="seq">
-      <Position>2</Position>
-    </column>
-    <column id="573" parent="558" name="tid">
+    <column id="568" parent="556" name="pid">
       <AutoIncrement>1</AutoIncrement>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="574" parent="558" name="pid">
+    <column id="569" parent="556" name="firstname">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>INTEGER|0s</StoredType>
+      <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="575" parent="558" name="treatment_date">
+    <column id="570" parent="556" name="surname">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="576" parent="558" name="begin">
+    <column id="571" parent="556" name="dateOfBirth">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="577" parent="558" name="end">
+    <column id="572" parent="556" name="carelevel">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="578" parent="558" name="description">
+    <column id="573" parent="556" name="roomnumber">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="579" parent="558" name="remark">
+    <column id="574" parent="556" name="assets">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="580" parent="558">
+    <key id="575" parent="556">
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="576" parent="557" name="type">
+      <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="577" parent="557" name="name">
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="578" parent="557" name="tbl_name">
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="579" parent="557" name="rootpage">
+      <Position>4</Position>
+      <StoredType>INT|0s</StoredType>
+    </column>
+    <column id="580" parent="557" name="sql">
+      <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="581" parent="558" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="582" parent="558" name="seq">
+      <Position>2</Position>
+    </column>
+    <column id="583" parent="559" name="tid">
+      <AutoIncrement>1</AutoIncrement>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="584" parent="559" name="pid">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="585" parent="559" name="treatment_date">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="586" parent="559" name="begin">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="587" parent="559" name="end">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="588" parent="559" name="description">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="589" parent="559" name="remark">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <foreign-key id="590" parent="559">
       <ColNames>pid</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>pid</RefColNames>
       <RefTableName>patient</RefTableName>
     </foreign-key>
-    <key id="581" parent="558">
+    <key id="591" parent="559">
       <ColNames>tid</ColNames>
       <Primary>1</Primary>
+    </key>
+    <column id="592" parent="560" name="uid">
+      <AutoIncrement>1</AutoIncrement>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="593" parent="560" name="username">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="594" parent="560" name="password">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <index id="595" parent="560" name="sqlite_autoindex_user_1">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="596" parent="560">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="597" parent="560">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

@@ -30,4 +30,8 @@ public class DaoFactory {
     public CaregiverDao createCaregiverDao(){
         return new CaregiverDao(ConnectionBuilder.getConnection());
     }
+
+    public UserDao createUserDAO() {
+        return new UserDao(ConnectionBuilder.getConnection());
+    }
 }
