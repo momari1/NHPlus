@@ -234,5 +234,5 @@ Als Mitarbeiter möchte ich mich über ein Login-Fenster mit Benutzernamen und P
 | TF3      | Passwortanzeige als Sternchen           | Der User gibt ein Passwort ein.                            | 1) Anwendung öffnen.<br>2) Passwort in das Passwortfeld eingeben.                                              | Passwort wird im Feld als Sternchen (*) angezeigt.                                                     |
 
 # Hinweis: Beim einloggen bitte eingeben!.
-### Benuzter name:
-### Passwort:
+### Benuzter name: admin
+### Passwort: 1234
