@@ -11,6 +11,7 @@ public class ConnectionBuilder {
     private static final String DB_NAME = "nursingHome.db";
     private static final String URL = "jdbc:sqlite:db/" + DB_NAME;
 
+
     private static Connection connection;
 
     synchronized public static Connection getConnection() {

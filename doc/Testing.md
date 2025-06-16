@@ -6,7 +6,12 @@ gelangst du in die Ansicht, in der du Inhalte hinzufügen kannst. Die Markdown-S
 https://markdown.de/ einsehen.
 
 
+# Tests zu Aufgabe 4
 
+| Testfall                                             | Ergebnis      | Fehlerbeschreibung        |
+|------------------------------------------------------|---------------|---------------------------|
+| TF1: Patient wird ohne Vermögensstand angezeigt      | funktioniert  | –                         |
+| TF2: Neuer Patient wird ohne Vermögensstand angelegt | funktioniert  | –                         |
 
 
 # Testing - User_Story 1: Als Pfleger brauche ich eine Übersicht aller Pfleger, um Arbeitszeiten zu planen.
@@ -19,3 +24,12 @@ https://markdown.de/ einsehen.
 | TF3_ | Create caregiver table in the database | Application is started and database connection exists is established    | Table caregiver is created with columns: cid, surname, firstname, phoneNumber, active, inactiveSince                                   | Works as expected | Passed |
 | TF4_ | Show all CaregiversView                | User is on the main screen and opens the "All Caregivers" view          | TableView displays all caregiver data (ID, first name, surname, phone number, active/inactive) text fields and buttons                 | Works as expected | Passed |
 | TF5_ | Generic DAO Implementation             | Application has database connection set up                              |                                                                                                                                        | Works as expected | Passed |
+
+
+# Tests zu Aufgabe 5
+
+| Testfall                                                             | Ergebnis      | Fehlerbeschreibung        |
+|----------------------------------------------------------------------|---------------|---------------------------|
+| TF1: Erfolgreiche Anmeldung mit gültigem Benutzernamen und Passwort  | funktioniert  | –                         |
+| TF2: Fehlerhafte Anmeldung                                           | funktioniert  | –                         |
+| TF3: Passwortanzeige als Sternchen                                   | funktioniert  | –                         |
