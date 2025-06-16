@@ -46,7 +46,7 @@
                         <TextField fx:id="textFieldSurname" prefHeight="26.0" prefWidth="220.0" promptText="Nachname" GridPane.columnIndex="1"/>
                         <TextField fx:id="textFieldFirstName" prefHeight="26.0" prefWidth="220.0" promptText="Vorname"/>
                         <TextField fx:id="textFieldPhoneNumber" prefWidth="160.0" promptText="Telefonnummer" GridPane.columnIndex="2"/>
-                        <TextField fx:id="textFieldActive" prefWidth="160.0" promptText="Aktiv" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldActive" prefWidth="160.0" promptText="Aktiv/Inaktiv" GridPane.rowIndex="1" />
                         <TextField fx:id="textFieldInactive" prefWidth="160.0" promptText="Inaktiv seit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     </children>
                     <padding>
