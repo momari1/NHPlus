@@ -18,42 +18,48 @@ public class Treatment {
     private LocalTime end;
     private String description;
     private String remarks;
+    private final long cid;
+
 
     /**
      * Constructor to initiate an object of class <code>Treatment</code> with the given parameter. Use this constructor
      * to initiate objects, which are not persisted yet, because it will not have a treatment id (tid).
      *
-     * @param pid Id of the treated patient.
-     * @param date Date of the Treatment.
-     * @param begin Time of the start of the treatment in format "hh:MM"
-     * @param end Time of the end of the treatment in format "hh:MM".
+     * @param pid         Id of the treated patient.
+     * @param date        Date of the Treatment.
+     * @param begin       Time of the start of the treatment in format "hh:MM"
+     * @param end         Time of the end of the treatment in format "hh:MM".
      * @param description Description of the treatment.
-     * @param remarks Remarks to the treatment.
+     * @param remarks     Remarks to the treatment.
+     * @param cid         Id of the responsible caregiver.
      */
     public Treatment(long pid, LocalDate date, LocalTime begin,
-                     LocalTime end, String description, String remarks) {
+                     LocalTime end, String description, String remarks, long cid) {
         this.pid = pid;
         this.date = date;
         this.begin = begin;
         this.end = end;
         this.description = description;
         this.remarks = remarks;
+        this.cid = cid;
+
     }
 
     /**
      * Constructor to initiate an object of class <code>Treatment</code> with the given parameter. Use this constructor
      * to initiate objects, which are already persisted and have a treatment id (tid).
      *
-     * @param tid Id of the treatment.
-     * @param pid Id of the treated patient.
-     * @param date Date of the Treatment.
-     * @param begin Time of the start of the treatment in format "hh:MM"
-     * @param end Time of the end of the treatment in format "hh:MM".
+     * @param tid         Id of the treatment.
+     * @param pid         Id of the treated patient.
+     * @param date        Date of the Treatment.
+     * @param begin       Time of the start of the treatment in format "hh:MM"
+     * @param end         Time of the end of the treatment in format "hh:MM".
      * @param description Description of the treatment.
-     * @param remarks Remarks to the treatment.
+     * @param remarks     Remarks to the treatment.
+     * @param cid         Id of the responsible caregiver.
      */
     public Treatment(long tid, long pid, LocalDate date, LocalTime begin,
-                     LocalTime end, String description, String remarks) {
+                     LocalTime end, String description, String remarks, long cid) {
         this.tid = tid;
         this.pid = pid;
         this.date = date;
@@ -61,6 +67,8 @@ public class Treatment {
         this.end = end;
         this.description = description;
         this.remarks = remarks;
+        this.cid = cid;
+
     }
 
     public long getTid() {
@@ -69,6 +77,10 @@ public class Treatment {
 
     public long getPid() {
         return this.pid;
+    }
+
+    public long getCid() {
+        return this.cid;
     }
 
     public String getDate() {
@@ -88,11 +100,11 @@ public class Treatment {
     }
 
     public void setBegin(String begin) {
-        this.begin = DateConverter.convertStringToLocalTime(begin);;
+        this.begin = DateConverter.convertStringToLocalTime(begin);
     }
 
     public void setEnd(String end) {
-        this.end = DateConverter.convertStringToLocalTime(end);;
+        this.end = DateConverter.convertStringToLocalTime(end);
     }
 
     public String getDescription() {
@@ -114,6 +126,7 @@ public class Treatment {
     public String toString() {
         return "\nBehandlung" + "\nTID: " + this.tid +
                 "\nPID: " + this.pid +
+                "\nCID: " + this.cid +
                 "\nDate: " + this.date +
                 "\nBegin: " + this.begin +
                 "\nEnd: " + this.end +

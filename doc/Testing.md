@@ -26,6 +26,17 @@ https://markdown.de/ einsehen.
 | TF5_ | Generic DAO Implementation             | Application has database connection set up                              |                                                                                                                                        | Works as expected | Passed |
 
 
+# Testing - User_Story 2: 
+                          Als Pflegekraft, möchte ich, beim Anlegen einer neuen Behandlung die zuständige Pflegekraft 
+                          über eine Combobox auswählen können, damit die Behandlung eindeutig einer Pflegekraft zugewiesen 
+                          ist und eine klare Verantwortlichkeit besteht.
+
+| Test | Description                       | Precondition | Expected Result        | Actual Result     | Status |
+|------|-----------------------------------|--------------|------------------------|-------------------|--------|
+| TF1_ | Creating a new treatment          |              |                        | Works as expected | Passed |
+
+
+
 # Tests zu Aufgabe 5
 
 | Testfall                                                             | Ergebnis       | Fehlerbeschreibung        |
