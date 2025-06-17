@@ -43,6 +43,9 @@ public class AllTreatmentController {
     private TableColumn<Treatment, String> columnEnd;
 
     @FXML
+    private TableColumn<Treatment, String> columnCaregiverPhoneNumber;
+
+    @FXML
     private TableColumn<Treatment, String> columnDescription;
 
     @FXML
@@ -79,6 +82,7 @@ public class AllTreatmentController {
         this.columnDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         this.columnBegin.setCellValueFactory(new PropertyValueFactory<>("begin"));
         this.columnEnd.setCellValueFactory(new PropertyValueFactory<>("end"));
+        this.columnCaregiverPhoneNumber.setCellValueFactory(new PropertyValueFactory<>("caregiverPhoneNumber"));
         this.columnDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         this.tableView.setItems(this.treatments);
 

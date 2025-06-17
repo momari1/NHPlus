@@ -103,6 +103,9 @@ public class Caregiver extends Person {
      * @return the date the caregiver became inactive, or null/empty if still active.
      */
     public String getInactiveSince() {
+        if (this.active) {
+            return ""; // leer zurückgeben, wenn Aktiv
+        }
         return inactiveSince.get();
     }
 
@@ -138,8 +141,8 @@ public class Caregiver extends Person {
                 "\nFirstname: " + this.getFirstName() +
                 "\nSurname: " + this.getSurname() +
                 "\nTelephone: " + this.phoneNumber +
-                "\n Active: " + this.active +
-                "\n Inactive Since: " + this.inactiveSince +
+                "\nActive: " + this.active +
+                "\nInactive Since: " + this.inactiveSince +
                 "\n";
     }
 }

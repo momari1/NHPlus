@@ -108,7 +108,8 @@ public class AllCaregiverController {
 
         this.tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Caregiver>() {
             @Override
-            public void changed(ObservableValue<? extends Caregiver> observableValue, Caregiver oldCaregiver, Caregiver newCaregiver) {;
+            public void changed(ObservableValue<? extends Caregiver> observableValue, Caregiver oldCaregiver, Caregiver newCaregiver) {
+                ;
                 AllCaregiverController.this.buttonDelete.setDisable(newCaregiver == null);
             }
         });
@@ -211,18 +212,21 @@ public class AllCaregiverController {
      * This method handles the events fired by the button to add a caregiver. It collects the data from the
      * <code>TextField</code>s, creates an object of class <code>Caregiver</code> of it and passes the object to
      * {@link CaregiverDao} to persist the data.
+     * The active status is taken from text ("aktiv"/"inaktiv") and the inactive date is only
+     * used if the caregiver is inactive.
      */
     @FXML
     public void handleAdd() {
         String surname = this.textFieldSurname.getText();
         String firstName = this.textFieldFirstName.getText();
         String phoneNumber = this.textFieldPhoneNumber.getText();
-        Boolean active = Boolean.valueOf(this.textFieldActive.getText());
+        String activeText = this.textFieldActive.getText().trim().toLowerCase();
+        boolean active = activeText.equals("aktiv");
         String inactive = this.textFieldInactive.getText();
         LocalDate date = DateConverter.convertStringToLocalDate(inactive);
 
         try {
-            this.dao.create(new Caregiver( firstName, surname, phoneNumber, active, date));
+            this.dao.create(new Caregiver(firstName, surname, phoneNumber, active, date));
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -244,14 +248,25 @@ public class AllCaregiverController {
     /**
      * Validates that all required input fields have been filled out.
      * <p>
-     * This method checks whether the text fields for first name, surname,
-     * phone number, active status, and inactive status are not empty
-     * and do not consist only of whitespace.
+     * This method checks whether the <code>TextField</code>s for first name, surname,
+     * and phone number are not blank.
+     * The <code>TextField</code> for active status must contain either "Aktiv" or "Inaktiv"
+     * (case insensitive).
+     * If the active status is "Aktiv", the <code>TextField</code> for inactive date can be empty,
+     * otherwise it must be filled.
+     * </p>
      *
-     * @return {@code true} if all fields contain valid (non-blank) input, otherwise {@code false}.
+     * @return {@code true} if all fields contain valid (non-blank) input according to the rules, otherwise {@code false}.
      */
     private boolean areInputDataValid() {
-        return !this.textFieldFirstName.getText().isBlank() && !this.textFieldSurname.getText().isBlank() &&
-               !this.textFieldPhoneNumber.getText().isBlank() && !this.textFieldActive.getText().isBlank() && !this.textFieldInactive.getText().isBlank();
+        boolean firstNameValid = !textFieldFirstName.getText().isBlank();
+        boolean surnameValid = !textFieldSurname.getText().isBlank();
+        boolean phoneValid = !textFieldPhoneNumber.getText().isBlank();
+
+        String activeText = textFieldActive.getText().trim().toLowerCase();
+        boolean activeValid = activeText.equals("aktiv") || activeText.equals("inaktiv");
+        boolean inactiveValid = activeText.equals("aktiv") || !textFieldInactive.getText().isBlank();
+
+        return firstNameValid && surnameValid && phoneValid && activeValid && inactiveValid;
     }
 }

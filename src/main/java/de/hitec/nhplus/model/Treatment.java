@@ -16,6 +16,7 @@ public class Treatment {
     private LocalDate date;
     private LocalTime begin;
     private LocalTime end;
+    private String caregiverPhoneNumber;
     private String description;
     private String remarks;
     private final long cid;
@@ -25,20 +26,22 @@ public class Treatment {
      * Constructor to initiate an object of class <code>Treatment</code> with the given parameter. Use this constructor
      * to initiate objects, which are not persisted yet, because it will not have a treatment id (tid).
      *
-     * @param pid         Id of the treated patient.
+     * @param pid         ID of the treated patient.
      * @param date        Date of the Treatment.
      * @param begin       Time of the start of the treatment in format "hh:MM"
      * @param end         Time of the end of the treatment in format "hh:MM".
+     * @param caregiverPhoneNumber Phone number of the caregiver.
      * @param description Description of the treatment.
      * @param remarks     Remarks to the treatment.
      * @param cid         Id of the responsible caregiver.
      */
     public Treatment(long pid, LocalDate date, LocalTime begin,
-                     LocalTime end, String description, String remarks, long cid) {
+                     LocalTime end, String caregiverPhoneNumber, String description, String remarks, long cid) {
         this.pid = pid;
         this.date = date;
         this.begin = begin;
         this.end = end;
+        this.caregiverPhoneNumber = caregiverPhoneNumber;
         this.description = description;
         this.remarks = remarks;
         this.cid = cid;
@@ -49,27 +52,33 @@ public class Treatment {
      * Constructor to initiate an object of class <code>Treatment</code> with the given parameter. Use this constructor
      * to initiate objects, which are already persisted and have a treatment id (tid).
      *
-     * @param tid         Id of the treatment.
-     * @param pid         Id of the treated patient.
+     * @param tid         ID of the treatment.
+     * @param pid         ID of the treated patient.
      * @param date        Date of the Treatment.
      * @param begin       Time of the start of the treatment in format "hh:MM"
      * @param end         Time of the end of the treatment in format "hh:MM".
+     * @param caregiverPhoneNumber Phone number of the caregiver.
      * @param description Description of the treatment.
      * @param remarks     Remarks to the treatment.
      * @param cid         Id of the responsible caregiver.
      */
     public Treatment(long tid, long pid, LocalDate date, LocalTime begin,
-                     LocalTime end, String description, String remarks, long cid) {
+                     LocalTime end, String caregiverPhoneNumber, String description, String remarks, long cid) {
         this.tid = tid;
         this.pid = pid;
         this.date = date;
         this.begin = begin;
         this.end = end;
+        this.caregiverPhoneNumber = caregiverPhoneNumber;
         this.description = description;
         this.remarks = remarks;
         this.cid = cid;
 
     }
+
+
+    // ---------------------- Getter & Setter ----------------------
+
 
     public long getTid() {
         return tid;
@@ -107,6 +116,14 @@ public class Treatment {
         this.end = DateConverter.convertStringToLocalTime(end);
     }
 
+    public String getCaregiverPhoneNumber() {
+        return caregiverPhoneNumber;
+    }
+
+    public void setCaregiverPhoneNumber(String caregiverPhoneNumber) {
+        this.caregiverPhoneNumber = caregiverPhoneNumber;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -131,6 +148,7 @@ public class Treatment {
                 "\nBegin: " + this.begin +
                 "\nEnd: " + this.end +
                 "\nDescription: " + this.description +
-                "\nRemarks: " + this.remarks + "\n";
+                "\nRemarks: " + this.remarks +
+                "\nCaregiverPhoneNumber: " + this.caregiverPhoneNumber + "\n";
     }
 }

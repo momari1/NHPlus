@@ -33,8 +33,8 @@ public class TreatmentDao extends DaoImp<Treatment> {
     @Override
     protected PreparedStatement getCreateStatement(Treatment treatment) {
         try {
-            final String SQL = "INSERT INTO treatment (pid, treatment_date, begin, end, description, remark, cid) " +
-                    "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            final String SQL = "INSERT INTO treatment (pid, treatment_date, begin, end, caregiverPhoneNumber, description, remark, cid) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = this.connection.prepareStatement(SQL);
             fillStatementWithTreatmentData(preparedStatement, treatment);
             return preparedStatement;
@@ -75,8 +75,9 @@ public class TreatmentDao extends DaoImp<Treatment> {
         LocalDate date = DateConverter.convertStringToLocalDate(result.getString(3));
         LocalTime begin = DateConverter.convertStringToLocalTime(result.getString(4));
         LocalTime end = DateConverter.convertStringToLocalTime(result.getString(5));
+        String caregiverPhoneNumber = result.getString("caregiverPhoneNumber");
         return new Treatment(result.getLong(1), result.getLong(2),
-                date, begin, end, result.getString(6), result.getString(7), result.getLong(8));
+                date, begin, end, caregiverPhoneNumber, result.getString(7), result.getString(8), result.getLong(9));
     }
 
     /**
@@ -111,8 +112,9 @@ public class TreatmentDao extends DaoImp<Treatment> {
             LocalDate date = DateConverter.convertStringToLocalDate(result.getString(3));
             LocalTime begin = DateConverter.convertStringToLocalTime(result.getString(4));
             LocalTime end = DateConverter.convertStringToLocalTime(result.getString(5));
+            String caregiverPhoneNumber = result.getString("caregiverPhoneNumber");
             Treatment treatment = new Treatment(result.getLong(1), result.getLong(2),
-                    date, begin, end, result.getString(6), result.getString(7), result.getLong(8));
+                    date, begin, end, caregiverPhoneNumber, result.getString(7), result.getString(8), result.getLong(9));
             list.add(treatment);
         }
         return list;
@@ -160,7 +162,7 @@ public class TreatmentDao extends DaoImp<Treatment> {
     protected PreparedStatement getUpdateStatement(Treatment treatment) {
         try {
             final String SQL = "UPDATE treatment SET " +
-                    "pid = ?, treatment_date = ?, begin = ?, end = ?, description = ?, remark = ?, cid = ? " +
+                    "pid = ?, treatment_date = ?, begin = ?, end = ?, caregiverPhoneNumber = ?, description = ?, remark = ?, cid = ? " +
                     "WHERE tid = ?";
             PreparedStatement preparedStatement = this.connection.prepareStatement(SQL);
             fillStatementWithTreatmentData(preparedStatement, treatment);
@@ -176,7 +178,7 @@ public class TreatmentDao extends DaoImp<Treatment> {
     /**
      * Generates a <code>PreparedStatement</code> to delete a treatment with the given id.
      *
-     * @param tid Id of the Treatment to delete.
+     * @param tid ID of the Treatment to delete.
      * @return <code>PreparedStatement</code> to delete treatment with the given id.
      */
     @Override
@@ -205,9 +207,10 @@ public class TreatmentDao extends DaoImp<Treatment> {
         statement.setString(2, treatment.getDate());
         statement.setString(3, treatment.getBegin());
         statement.setString(4, treatment.getEnd());
-        statement.setString(5, treatment.getDescription());
-        statement.setString(6, treatment.getRemarks());
-        statement.setLong(7, treatment.getCid());
+        statement.setString(5, treatment.getCaregiverPhoneNumber());
+        statement.setString(6, treatment.getDescription());
+        statement.setString(7, treatment.getRemarks());
+        statement.setLong(8, treatment.getCid());
     }
 
 }
