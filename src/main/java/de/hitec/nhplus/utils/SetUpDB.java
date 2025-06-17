@@ -47,7 +47,6 @@ public class SetUpDB {
             statement.execute("DROP TABLE treatment");
             statement.execute("DROP TABLE user");
             statement.execute("DROP TABLE caregiver");
-            statement.execute("DROP TABLE patient");
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
         }
@@ -76,6 +75,7 @@ public class SetUpDB {
                 "   treatment_date TEXT NOT NULL, " +
                 "   begin TEXT NOT NULL, " +
                 "   end TEXT NOT NULL, " +
+                "   caregiverPhoneNumber TEXT, " +
                 "   description TEXT NOT NULL, " +
                 "   remark TEXT NOT NULL, " +
                 "   cid INTEGER " +

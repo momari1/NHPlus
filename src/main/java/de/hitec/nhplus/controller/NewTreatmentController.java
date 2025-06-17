@@ -28,13 +28,13 @@ public class NewTreatmentController {
     private Label labelCaregiverName;
 
     @FXML
+    private Label labelCaregiverPhoneNumber;
+
+    @FXML
     private TextField textFieldBegin;
 
     @FXML
     private TextField textFieldEnd;
-
-    @FXML
-    private TextField textFieldCaregiverPhoneNumber;
 
     @FXML
     private TextField textFieldDescription;
@@ -70,7 +70,7 @@ public class NewTreatmentController {
                 NewTreatmentController.this.buttonAdd.setDisable(NewTreatmentController.this.areInputDataInvalid());
         this.textFieldBegin.textProperty().addListener(inputNewPatientListener);
         this.textFieldEnd.textProperty().addListener(inputNewPatientListener);
-        this.textFieldCaregiverPhoneNumber.textProperty().addListener(inputNewPatientListener);
+//        this.textFieldCaregiverPhoneNumber.textProperty().addListener(inputNewPatientListener);
         this.textFieldDescription.textProperty().addListener(inputNewPatientListener);
         this.textAreaRemarks.textProperty().addListener(inputNewPatientListener);
         this.datePicker.valueProperty().addListener((observableValue, localDate, t1) -> NewTreatmentController.this.buttonAdd.setDisable(NewTreatmentController.this.areInputDataInvalid()));
@@ -96,6 +96,7 @@ public class NewTreatmentController {
 
     private void showCaregiverData() {
         this.labelCaregiverName.setText(caregiver.getSurname() + ", " + caregiver.getFirstName());
+        this.labelCaregiverPhoneNumber.setText(caregiver.getPhoneNumber());
     }
 
     @FXML
@@ -103,7 +104,7 @@ public class NewTreatmentController {
         LocalDate date = this.datePicker.getValue();
         LocalTime begin = DateConverter.convertStringToLocalTime(textFieldBegin.getText());
         LocalTime end = DateConverter.convertStringToLocalTime(textFieldEnd.getText());
-        String caregiverPhoneNumber = this.textFieldCaregiverPhoneNumber.getText();
+        String caregiverPhoneNumber = this.labelCaregiverPhoneNumber.getText();
         String description = textFieldDescription.getText();
         String remarks = textAreaRemarks.getText();
         Treatment treatment = new Treatment(patient.getPid(), date, begin, end, caregiverPhoneNumber, description, remarks, caregiver.getCid());
@@ -122,7 +123,7 @@ public class NewTreatmentController {
     }
 
     @FXML
-    public void handleCancel(){
+    public void handleCancel() {
         stage.close();
     }
 
