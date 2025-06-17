@@ -71,7 +71,7 @@ public class TreatmentController {
         this.labelCaregiverName.setText(caregiver.getSurname() + ", " + caregiver.getFirstName());
         this.labelCareLevel.setText(patient.getCareLevel());
         LocalDate date = DateConverter.convertStringToLocalDate(treatment.getDate());
-        this.labelCaregiverPhoneNumber.setText(this.treatment.getCaregiverPhoneNumber());
+        this.labelCaregiverPhoneNumber.setText(this.caregiver.getPhoneNumber());
         this.datePicker.setValue(date);
         this.textFieldBegin.setText(this.treatment.getBegin());
         this.textFieldEnd.setText(this.treatment.getEnd());

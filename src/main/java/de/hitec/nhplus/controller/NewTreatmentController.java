@@ -122,7 +122,7 @@ public class NewTreatmentController {
     }
 
     @FXML
-    public void handleCancel() {
+    public void handleCancel(){
         stage.close();
     }
 

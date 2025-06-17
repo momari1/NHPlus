@@ -19,9 +19,10 @@
 <br>
 
 ## Testing - User_Story 2:
-                          Als Pflegekraft, möchte ich, beim Anlegen einer neuen Behandlung die zuständige Pflegekraft 
-                          über eine Combobox auswählen können, damit die Behandlung eindeutig einer Pflegekraft zugewiesen 
-                          ist und eine klare Verantwortlichkeit besteht.
+
+**Als Pflegekraft, möchte ich, beim Anlegen einer neuen Behandlung die zuständige Pflegekraft 
+über eine Combobox auswählen können, damit die Behandlung eindeutig einer Pflegekraft zugewiesen 
+ist und eine klare Verantwortlichkeit besteht.**
 
 | Test | Description                       | Precondition | Expected Result        | Actual Result     | Status |
 |------|-----------------------------------|--------------|------------------------|-------------------|--------|
