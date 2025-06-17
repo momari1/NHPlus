@@ -1,8 +1,10 @@
 package de.hitec.nhplus.controller;
 
+import de.hitec.nhplus.datastorage.CaregiverDao;
 import de.hitec.nhplus.datastorage.DaoFactory;
 import de.hitec.nhplus.datastorage.PatientDao;
 import de.hitec.nhplus.datastorage.TreatmentDao;
+import de.hitec.nhplus.model.Caregiver;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -17,6 +19,9 @@ public class TreatmentController {
 
     @FXML
     private Label labelPatientName;
+
+    @FXML
+    private Label labelCaregiverName;
 
     @FXML
     private Label labelCareLevel;
@@ -39,23 +44,28 @@ public class TreatmentController {
     private AllTreatmentController controller;
     private Stage stage;
     private Patient patient;
+    private Caregiver caregiver;
     private Treatment treatment;
 
     public void initializeController(AllTreatmentController controller, Stage stage, Treatment treatment) {
         this.stage = stage;
-        this.controller= controller;
+        this.controller = controller;
         PatientDao pDao = DaoFactory.getDaoFactory().createPatientDAO();
+        CaregiverDao cDao = DaoFactory.getDaoFactory().createCaregiverDao();
+
         try {
             this.patient = pDao.read((int) treatment.getPid());
             this.treatment = treatment;
+            this.caregiver = cDao.read((int) treatment.getCid());
             showData();
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
     }
 
-    private void showData(){
-        this.labelPatientName.setText(patient.getSurname()+", "+patient.getFirstName());
+    private void showData() {
+        this.labelPatientName.setText(patient.getSurname() + ", " + patient.getFirstName());
+        this.labelCaregiverName.setText(caregiver.getSurname() + ", " + caregiver.getFirstName());
         this.labelCareLevel.setText(patient.getCareLevel());
         LocalDate date = DateConverter.convertStringToLocalDate(treatment.getDate());
         this.datePicker.setValue(date);
@@ -66,7 +76,7 @@ public class TreatmentController {
     }
 
     @FXML
-    public void handleChange(){
+    public void handleChange() {
         this.treatment.setDate(this.datePicker.getValue().toString());
         this.treatment.setBegin(textFieldBegin.getText());
         this.treatment.setEnd(textFieldEnd.getText());
@@ -77,7 +87,7 @@ public class TreatmentController {
         stage.close();
     }
 
-    private void doUpdate(){
+    private void doUpdate() {
         TreatmentDao dao = DaoFactory.getDaoFactory().createTreatmentDao();
         try {
             dao.update(treatment);
@@ -87,7 +97,7 @@ public class TreatmentController {
     }
 
     @FXML
-    public void handleCancel(){
+    public void handleCancel() {
         stage.close();
     }
 }
