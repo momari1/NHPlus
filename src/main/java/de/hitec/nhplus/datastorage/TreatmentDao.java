@@ -44,7 +44,6 @@ public class TreatmentDao extends DaoImp<Treatment> {
         }
     }
 
-
     /**
      * Generates a <code>PreparedStatement</code> to query a treatment by a given treatment id (tid).
      *
@@ -75,9 +74,8 @@ public class TreatmentDao extends DaoImp<Treatment> {
         LocalDate date = DateConverter.convertStringToLocalDate(result.getString(3));
         LocalTime begin = DateConverter.convertStringToLocalTime(result.getString(4));
         LocalTime end = DateConverter.convertStringToLocalTime(result.getString(5));
-        String caregiverPhoneNumber = result.getString("caregiverPhoneNumber");
         return new Treatment(result.getLong(1), result.getLong(2),
-                date, begin, end, caregiverPhoneNumber, result.getString(7), result.getString(8), result.getLong(9));
+                date, begin, end, result.getString(7), result.getString(8), result.getLong(9));
     }
 
     /**
@@ -114,7 +112,7 @@ public class TreatmentDao extends DaoImp<Treatment> {
             LocalTime end = DateConverter.convertStringToLocalTime(result.getString(5));
             String caregiverPhoneNumber = result.getString("caregiverPhoneNumber");
             Treatment treatment = new Treatment(result.getLong(1), result.getLong(2),
-                    date, begin, end, caregiverPhoneNumber, result.getString(7), result.getString(8), result.getLong(9));
+                    date, begin, end, result.getString(7), result.getString(8), result.getLong(9));
             list.add(treatment);
         }
         return list;
@@ -174,7 +172,6 @@ public class TreatmentDao extends DaoImp<Treatment> {
         }
     }
 
-
     /**
      * Generates a <code>PreparedStatement</code> to delete a treatment with the given id.
      *
@@ -212,5 +209,4 @@ public class TreatmentDao extends DaoImp<Treatment> {
         statement.setString(7, treatment.getRemarks());
         statement.setLong(8, treatment.getCid());
     }
-
 }

@@ -33,7 +33,6 @@ public class Treatment {
      * @param caregiverPhoneNumber Phone number of the caregiver.
      * @param description Description of the treatment.
      * @param remarks     Remarks to the treatment.
-     * @param cid         Id of the responsible caregiver.
      */
     public Treatment(long pid, LocalDate date, LocalTime begin,
                      LocalTime end, String caregiverPhoneNumber, String description, String remarks, long cid) {
@@ -60,16 +59,15 @@ public class Treatment {
      * @param caregiverPhoneNumber Phone number of the caregiver.
      * @param description Description of the treatment.
      * @param remarks     Remarks to the treatment.
-     * @param cid         Id of the responsible caregiver.
+     * @param cid         ID of the responsible caregiver.
      */
     public Treatment(long tid, long pid, LocalDate date, LocalTime begin,
-                     LocalTime end, String caregiverPhoneNumber, String description, String remarks, long cid) {
+                     LocalTime end, String description, String remarks, long cid) {
         this.tid = tid;
         this.pid = pid;
         this.date = date;
         this.begin = begin;
         this.end = end;
-        this.caregiverPhoneNumber = caregiverPhoneNumber;
         this.description = description;
         this.remarks = remarks;
         this.cid = cid;
